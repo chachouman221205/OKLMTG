@@ -1,0 +1,6 @@
+<h5>Veuillez gagner {{ goal }} thunes popur continuer</h5>
+<p> thunes : {{ thune }} </p>
+<button (click)="add_money()">Gagner de la thune</button>
+<button *ngIf="thune>(goal+5)" (click)="reset_money()">Retirer toute la thune</button>
+<button (click)="validate()">Valider</button>
+<p *ngIf="tries!=3">Essais restants {{ tries }}</p>

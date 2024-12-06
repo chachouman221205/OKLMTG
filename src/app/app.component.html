@@ -1,1 +1,16 @@
-<app-home></app-home>
+<p>{{ stage }}</p>
+<div *ngIf="stage=='welcome'">
+  <h1>Bienvenue sur notre site web !</h1>
+  <button (click)="gotocaptcha()">Vers le site</button>
+</div>
+<div *ngIf="stage=='captcha'">
+  <h1>Captcha !!</h1>
+  <app-captcha (messageEvent)="receiveMessage($event)"></app-captcha>
+</div>
+<div *ngIf="stage=='home'">
+  <h1>Félicitations, vous n'êtes pas un robot, profitez du site!</h1>
+</div>
+<div *ngIf="stage=='denied'">
+  <h1>Bienvenue sur notre site web !</h1>
+  <p><i>Votre tentative précédente a échouée, Veuillez réessayer.</i></p>
+</div>

@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  thune = 0;
-
-  add_money() {
-    this.thune += 1;
-  }
+  
 }
