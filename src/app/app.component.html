@@ -1,14 +1,17 @@
 <!--<p>{{ stage }}</p>-->
 <div *ngIf="stage=='welcome'">
-  <h1>Bienvenue sur notre site web !</h1>
+  <h1>Bienvenue sur notre application web !</h1>
   <button (click)="gotocaptcha()">Vers le site</button>
 </div>
 <div *ngIf="stage=='captcha'">
-  <h1>Captcha !!</h1>
+  <h1>! Game-tcha !</h1>
+  <h4>Veuillez prouver que vous êtes humain en réussissant ce petit jeu : </h4>
   <app-captcha (messageEvent)="receiveMessage($event)"></app-captcha>
 </div>
 <div *ngIf="stage=='home'">
   <h1>Félicitations, vous n'êtes pas un robot, profitez du site!</h1>
+  <p>L'eau c'est bien, dans 20 à 30 ans y en aura plus et on va mourrriirrr</p>
+  <p>En plus dans l'eau y a des jolis poissons et ils vont mourire eux aussi</p>
 </div>
 <div *ngIf="stage=='denied'">
   <h1>Bienvenue sur notre site web !</h1>

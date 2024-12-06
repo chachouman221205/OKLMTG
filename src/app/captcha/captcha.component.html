@@ -1,8 +1,9 @@
-<h5>Veuillez gagner un certain nombre de thunes pour continuer</h5>
-<p>Ce nombre est aléatoire, et il est inférieur à 50</p>
+<h5>Si vous dépensez exactement X jetons, vous gagnez</h5>
+<p>X est un nombre aléatoire entre 1 et 50. A chaque essai, vous saurez si vous avez dépensé trop de jetons ou trop peu de jetons</p>
 <p> {{ result_message }} </p>
-<p> thunes : {{ thune }} </p>
-<button (click)="add_money()">Gagner de la thune</button>
-<button (click)="reset_money()">Retirer toute la thune</button>
+<p> jetons : {{ jetons }}</p>
+<p *ngIf="gained!=0">vous venez de gagner {{ gained }} jetons</p>
+<button (click)="add_money()">Gagner des jetons</button>
+<button (click)="reset_money()">Jeter les jetons</button>
 <button (click)="validate()">Valider</button>
-<p *ngIf="tries!=10">Essais restants {{ tries }}</p>
+<p *ngIf="tries!=default_tries">Essais restants {{ tries }}</p>
